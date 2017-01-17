@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     v1.setDrawingCacheEnabled(true);
                     v1.getRootView().buildDrawingCache();
                     Bitmap scrimg = v1.getRootView().getDrawingCache();
-                    FileOutputStream out = new FileOutputStream("/sdcard/DCIM/screen.png");
+                    FileOutputStream out = new FileOutputStream(Environment.getExternalStoragePublicDirectory()+"/DCIM/screen.png");
                     scrimg.compress(Bitmap.CompressFormat.PNG, 100, out);
                     System.out.println("완료");
                 } catch (FileNotFoundException e) {
